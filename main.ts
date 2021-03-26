@@ -1,6 +1,10 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     player1.y += -10
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
+    tiles.setTilemap(tilemap`level2`)
+    player1.setPosition(5, 90)
+})
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     player1.y += 10
 })
