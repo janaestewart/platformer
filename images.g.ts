@@ -3,7 +3,7 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image13":return img`
+            case "image9":return img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . 6 6 6 6 . . . . . . 
@@ -21,7 +21,7 @@ namespace myImages {
 . . . 1 1 1 1 1 1 1 1 1 1 . . . 
 . . . . 1 1 1 1 1 1 1 1 . . . . 
 `;
-            case "image14":return img`
+            case "image10":return img`
 . . . f f f f f f f f f . . . . 
 . . f f f f f f f f f f f . . . 
 . f f f f f f f f f f f f f . . 
@@ -37,78 +37,8 @@ namespace myImages {
 . . . . . . 2 2 2 . . . . . . . 
 . . . . . . 2 2 2 . . . . . . . 
 . . . . . . 8 . 8 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
-            case "image17":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 6 6 6 6 . . . . . . 
-. . . . . 6 6 6 6 6 6 . . . . . 
-. . . . 6 6 6 6 6 6 6 6 . . . . 
-. . . 6 6 6 6 6 6 6 6 6 6 . . . 
-. . 6 6 6 6 6 6 6 6 6 6 6 6 . . 
-. 6 6 6 6 6 6 6 6 6 6 6 6 6 6 . 
-. 6 6 6 . 1 1 1 1 1 1 . 6 6 6 . 
-. . . . 1 1 1 1 1 1 1 1 . . . . 
-. . . 1 1 1 1 1 1 1 1 1 1 . . . 
-. . 1 1 1 2 1 1 1 1 2 1 1 1 . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
-. . 1 1 1 1 2 2 2 2 1 1 1 1 . . 
-. . . 1 1 1 1 1 1 1 1 1 1 . . . 
-. . . . 1 1 1 1 1 1 1 1 . . . . 
-`;
-            case "image18":return img`
-. . . f f f f f f f f f . . . . 
-. . f f f f f f f f f f f . . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. . . e e e e e e e e e . . . . 
-. . . e e f e e e f e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . 2 2 2 2 2 . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
 . . . . . . 8 . 8 . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`;
-            case "image1":return img`
-. . . f f f f f f f f f . . . . 
-. . f f f f f f f f f f f . . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. . . e e e e e e e e e . . . . 
-. . . e e f e e e f e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . 2 2 2 2 2 . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 8 . 8 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
-            case "image2":return img`
-. . . f f f f f f f f f . . . . 
-. . f f f f f f f f f f f . . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. . . e e e e e e e e e . . . . 
-. . . e e f e e e f e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . 2 2 2 2 2 . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 8 . 8 . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `;
         }
