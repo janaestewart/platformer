@@ -155,6 +155,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     tiles.setTilemap(tilemap`level2`)
+    scene.setBackgroundColor(11)
     player1.setPosition(5, 90)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
