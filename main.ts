@@ -1,3 +1,16 @@
+function LevelStart () {
+    if (currentLevel == 1) {
+        tiles.setTilemap(tilemap`level1`)
+    } else if (currentLevel == 2) {
+        tiles.setTilemap(tilemap`level5`)
+        scene.setBackgroundColor(4)
+        player1.setPosition(5, 90)
+    } else {
+        tiles.setTilemap(tilemap`level2`)
+        scene.setBackgroundColor(11)
+        player1.setPosition(5, 90)
+    }
+}
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     player1,
@@ -91,6 +104,20 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . 
+        . . . . . f . . . . 
+        . . . . 2 2 2 . . . 
+        . . . 2 2 2 2 2 . . 
+        . . . 2 2 2 2 2 . . 
+        . . . 2 2 2 2 2 . . 
+        . . . 2 2 2 2 2 . . 
+        . . . 2 2 2 2 2 . . 
+        . . . 2 2 2 2 2 . . 
+        . . . . . . . . . . 
+        `, player1, 100, 0)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     player1,
@@ -154,9 +181,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
-    tiles.setTilemap(tilemap`level2`)
-    scene.setBackgroundColor(11)
-    player1.setPosition(5, 90)
+    currentLevel += 1
+    LevelStart()
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
     player1.setPosition(11, 50)
@@ -258,9 +284,17 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+controller.A.onEvent(ControllerButtonEvent.Released, function () {
+    animation.stopAnimation(animation.AnimationTypes.All, player1)
+})
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     animation.stopAnimation(animation.AnimationTypes.All, player1)
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+	
+})
+let projectile: Sprite = null
+let currentLevel = 0
 let player1: Sprite = null
 player1 = sprites.create(img`
     . . . f f f f f f f f f . . . . 
@@ -285,6 +319,10 @@ player1 = sprites.create(img`
 controller.moveSprite(player1, 100, 0)
 scene.cameraFollowSprite(player1)
 scene.setBackgroundColor(9)
-tiles.setTilemap(tilemap`level1`)
 player1.ay = 500
 player1.setPosition(11, 50)
+currentLevel = 1
+LevelStart()
+game.onUpdateInterval(200, function () {
+	
+})

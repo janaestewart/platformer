@@ -3,44 +3,7 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image3":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 6 6 6 6 . . . . . . 
-. . . . . 6 6 6 6 6 6 . . . . . 
-. . . . 6 6 6 6 6 6 6 6 . . . . 
-. . . 6 6 6 6 6 6 6 6 6 6 . . . 
-. . 6 6 6 6 6 6 6 6 6 6 6 6 . . 
-. 6 6 6 6 6 6 6 6 6 6 6 6 6 6 . 
-. 6 6 6 . 1 1 1 1 1 1 . 6 6 6 . 
-. . . . 1 1 1 1 1 1 1 1 . . . . 
-. . . 1 1 1 1 1 1 1 1 1 1 . . . 
-. . 1 1 1 2 1 1 1 1 2 1 1 1 . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
-. . 1 1 1 1 2 2 2 2 1 1 1 1 . . 
-. . . 1 1 1 1 1 1 1 1 1 1 . . . 
-. . . . 1 1 1 1 1 1 1 1 . . . . 
-`;
-            case "image4":return img`
-. . . f f f f f f f f f . . . . 
-. . f f f f f f f f f f f . . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. f f f f f f f f f f f f f . . 
-. . . e e e e e e e e e . . . . 
-. . . e e f e e e f e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . e e e e e e e e e . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . 2 2 2 2 2 . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 2 2 2 . . . . . . . 
-. . . . . . 8 . 8 . . . . . . . 
-. . . . . . 8 . 8 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
+
         }
         return null;
     })
