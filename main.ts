@@ -2,13 +2,13 @@ function LevelStart () {
     if (currentLevel == 1) {
         tiles.setTilemap(tilemap`level1`)
     } else if (currentLevel == 2) {
+        player1.setPosition(7, 1)
         tiles.setTilemap(tilemap`level5`)
-        scene.setBackgroundColor(4)
-        player1.setPosition(5, 90)
+        scene.setBackgroundColor(5)
     } else {
         tiles.setTilemap(tilemap`level2`)
         scene.setBackgroundColor(11)
-        player1.setPosition(5, 90)
+        player1.setPosition(4, 90)
     }
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -185,8 +185,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, l
     LevelStart()
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
-    player1.setPosition(11, 50)
     player1.startEffect(effects.hearts, 500)
+    if (currentLevel == 1) {
+        player1.setPosition(11, 50)
+    } else if (currentLevel == 2) {
+        player1.setPosition(7, 3)
+    } else {
+        player1.setPosition(4, 90)
+    }
 })
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     animation.stopAnimation(animation.AnimationTypes.All, player1)
