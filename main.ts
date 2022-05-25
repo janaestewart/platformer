@@ -184,6 +184,99 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, l
     currentLevel += 1
     LevelStart()
 })
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    player1,
+    [img`
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e f e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . 2 2 2 e 2 . . . . . . 
+        . . . . . 2 2 2 e 2 . . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . . . . 8 . . . . . . . 
+        . . . . . . . . 8 . . . . . . . 
+        `,img`
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e f e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . 2 2 2 e 2 . . . . . . 
+        . . . . . 2 2 e e 2 . . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . . 8 . 8 . . . . . . . 
+        . . . . . . 8 . 8 . . . . . . . 
+        `,img`
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e f e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . 2 2 e 2 2 . . . . . . 
+        . . . . . 2 e 2 2 2 . . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . . 8 . . . . . . . . . 
+        . . . . . . 8 . . . . . . . . . 
+        `,img`
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e f e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . 2 2 2 e 2 . . . . . . 
+        . . . . . 2 2 e 2 2 . . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . . 8 . 8 . . . . . . . 
+        . . . . . . 8 . 8 . . . . . . . 
+        `,img`
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . f f f f f f f f f f f . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e f e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . 2 2 2 e 2 . . . . . . 
+        . . . . . 2 2 2 e 2 . . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . . . . . 8 . . . . . . . 
+        . . . . . . . . 8 . . . . . . . 
+        `],
+    200,
+    true
+    )
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
     player1.startEffect(effects.hearts, 500)
     if (currentLevel == 1) {
@@ -296,9 +389,6 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     animation.stopAnimation(animation.AnimationTypes.All, player1)
 })
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-	
-})
 let projectile: Sprite = null
 let currentLevel = 0
 let player1: Sprite = null
@@ -311,7 +401,7 @@ player1 = sprites.create(img`
     . f f f f f f f f f f f f f . . 
     . . . e e e e e e e e e . . . . 
     . . . e e f e e e f e e . . . . 
-    . . . e e e e e e e e e . . . . 
+    . . . e e e 3 3 3 e e e . . . . 
     . . . e e e e e e e e e . . . . 
     . . . . . . 2 2 2 . . . . . . . 
     . . . . . 2 2 2 2 2 . . . . . . 
